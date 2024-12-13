@@ -165,7 +165,7 @@ def wood_stock_analysis():
     # Export results to Google Drive
     task = ee.batch.Export.table.toDrive(
         collection=results,
-        description=f'AlphaEO/WoodStockAnalysis_auto_{datetime.datetime.now().strftime("%Y%m%d")}',
+        description=f'WoodStockAnalysis_auto_{datetime.datetime.now().strftime("%Y%m%d")}',
         fileFormat='CSV'
     )
     task.start()
